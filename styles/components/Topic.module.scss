@@ -1,0 +1,56 @@
+@import "../_colors.scss";
+
+.subgroups {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+
+    .subgroupSelector {
+        padding: 0.65rem 1.5rem;
+        border-radius: 500px;
+        margin: 0.25rem;
+        opacity: 0.5;
+        user-select: none;
+
+        &.selected {
+            opacity: 0.9;
+        }
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+        @include themed() {
+            background-color: t("bg-2");
+        }
+    }
+}
+
+.subgroupCont {
+    padding: 2rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .subgroup {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            width: 100%;
+        }
+        p {
+            margin-bottom: 1rem;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .chartContainer {
+            margin: 1rem 0;
+        }
+    }
+}

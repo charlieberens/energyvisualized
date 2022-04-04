@@ -1,0 +1,28 @@
+@import "../_colors.scss";
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 2rem;
+    align-items: center;
+    @include themed() {
+        background: t("bg-3");
+    }
+
+    .plug {
+        span,
+        a {
+            opacity: 0.6;
+        }
+        a {
+            @include themed() {
+                border-bottom: 1px solid t("text");
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

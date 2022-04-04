@@ -1,0 +1,89 @@
+@import "../_colors.scss";
+
+.chart {
+    margin: 2rem 0;
+    .chartTitle {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .chartInner {
+        margin: 0 auto;
+    }
+    .label {
+        @include themed() {
+            fill: t("text");
+        }
+        font-family: inherit;
+        font-size: 90%;
+    }
+    .source {
+        margin-top: 0.5rem;
+        font-style: italic;
+        font-size: 80%;
+
+        a {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+/* Chart */
+// Line Chart
+.lineChart {
+    .lineChartLine {
+        @include themed() {
+            stroke: t("primary");
+        }
+        stroke-width: 1.5;
+    }
+    .lineChartDot {
+        @include themed() {
+            stroke: t("primary");
+            fill: t("bg-3");
+        }
+        stroke-width: 2;
+        r: 7;
+        fill: none;
+    }
+}
+// Multi-Line
+.multiLineChart {
+    svg {
+        .lineCharDot {
+            fill: red;
+            r: 3;
+        }
+    }
+}
+.key {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include themed() {
+    }
+    .keyEl {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0.75rem;
+        .keyBox {
+            width: 15px;
+            height: 15px;
+            margin-right: 0.5rem;
+            border-radius: 3px;
+        }
+        .keyText {
+            font-size: 80%;
+        }
+    }
+}
+// Bar Chart
+.bar {
+    @include themed() {
+        // fill: t("primary");
+    }
+}

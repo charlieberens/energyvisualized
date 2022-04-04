@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "source": {
+            "text": "IAEA Power Reactor Information System",
+            "url": "https://pris.iaea.org/PRIS/WorldStatistics/NuclearShareofElectricityGeneration.aspx"
+        },
+        "x": "Country",
+        "y": "Nuclear Share of Electricity Generation (%)",
+        "title": "Nuclear Share of Electricity Generation in 2020"
+    },
+    "data": [
+        { "x": "United States", "y": 19.7 },
+        { "x": "China", "y": 4.9 },
+        { "x": "Japan", "y": 5.1 },
+        { "x": "Germany", "y": 11.3 },
+        { "x": "India ", "y": 3.3 },
+        { "x": "United Kingdom", "y": 14.5 },
+        { "x": "France", "y": 70.6 },
+        { "x": "Brazil", "y": 2.1 },
+        { "x": "Canada", "y": 14.6 }
+    ]
+}

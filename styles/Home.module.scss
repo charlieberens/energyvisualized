@@ -1,0 +1,65 @@
+@import "_colors.scss";
+
+.main {
+    min-height: 100vh;
+}
+
+.header {
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    @include themed() {
+        background: linear-gradient(-125deg, t("bg-1"), t("bg-2"));
+    }
+}
+.groups {
+    @include themed() {
+        background-color: t("bg-3");
+    }
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+
+    a {
+        font-size: 30pt;
+        border-radius: 500px;
+        @include themed() {
+            background-color: t("text");
+        }
+
+        svg {
+            @include themed() {
+                fill: t("bg-2");
+            }
+        }
+
+        display: grid;
+        place-items: center;
+        margin: 0 0.5rem;
+        padding: 0.25rem;
+        cursor: pointer;
+
+        &.selected {
+            transform: scale(1.2);
+        }
+        &:hover {
+            transform: scale(1.1);
+            &.selected {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+.section {
+    @include themed() {
+        background-color: t("bg-3");
+    }
+}

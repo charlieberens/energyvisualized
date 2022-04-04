@@ -1,0 +1,54 @@
+$themes: (
+    dark: (
+        "text": #e0e5eb,
+        "bg-1": #070a24,
+        "bg-2": #132230,
+        "bg-3": #07111b,
+        "primary": #296fb4,
+    ),
+    light: (
+        "text": #04080c,
+        "bg-1": #eef5ef,
+        "bg-2": rgb(202, 231, 204),
+        "bg-3": #ebf3ee,
+        "primary": #24a13f,
+    ),
+);
+
+@mixin themed() {
+    @each $theme, $map in $themes {
+        :global(.theme--#{$theme}) & {
+            //For modules
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+        .theme--#{$theme} & {
+            //For non-modules
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+@function t($key) {
+    @return map-get($theme-map, $key);
+}

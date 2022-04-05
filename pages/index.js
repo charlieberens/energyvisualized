@@ -2,6 +2,13 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 import React, { Component } from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    withRouter,
+} from "react-router-dom";
 import { IoIosNuclear } from "react-icons/io";
 import { GiWindTurbine } from "react-icons/gi";
 import { AiFillFire } from "react-icons/ai";
@@ -30,7 +37,6 @@ export default class Home extends Component {
                     />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-
                 <main className={styles.main}>
                     <header className={styles.header}>
                         <div>

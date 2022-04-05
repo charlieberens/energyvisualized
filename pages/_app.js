@@ -11,7 +11,11 @@ function MyApp({ Component, pageProps }) {
             <button onClick={() => setDark(!dark)} className="theme-toggle">
                 {dark ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
             </button>
-            <Component {...pageProps} />
+            <div suppressHydrationWarning>
+                {typeof window === "undefined" ? null : (
+                    <Component {...pageProps} />
+                )}
+            </div>
         </div>
     );
 }

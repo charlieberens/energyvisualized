@@ -23,8 +23,8 @@ export default class Home extends Component {
                         <div className={styles.subdiv}>
                             <h1>Energy Visualized</h1>
                             <p>
-                                Examining the world's energy situation with
-                                beautiful data and clear analysis.
+                                Examining the world&lsquo;s energy situation
+                                with beautiful data and clear analysis.
                             </p>
                         </div>
                         <p className={styles.dropDate}>

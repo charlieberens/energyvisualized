@@ -67,8 +67,8 @@ export class Nuclear extends Component {
                                             "#7b8387",
                                             "#ded159",
                                             "#ae5de3",
-                                            "#49d147",
                                             "#abf285",
+                                            "#49d147",
                                         ]}
                                     />
                                 </Chart>

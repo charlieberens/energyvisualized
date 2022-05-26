@@ -28,8 +28,7 @@ export default class Home extends Component {
                             </p>
                         </div>
                         <p className={styles.dropDate}>
-                            The first topic, nuclear energy, will drop on April
-                            25, 2022.
+                            The first topic, nuclear energy, will drop soon.
                         </p>
                     </div>
                 </div>

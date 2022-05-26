@@ -38,14 +38,14 @@ export class Nuclear extends Component {
                             <h2>Nuclear Energy</h2>
                             <p>
                                 It’s common to hear Nuclear Energy presented as
-                                a binary good or evil. It&aposs either a
+                                a binary good or evil. It&apos;s either a
                                 dangerous, polluting technology that should be
                                 outlawed or the cheap, easy answer to climate
                                 change. Neither of these beliefs is reality.
                             </p>
                             <p>
                                 It’s common to hear Nuclear Energy presented as
-                                a binary good or evil. It&aposs either a
+                                a binary good or evil. It&apos;s either a
                                 dangerous, polluting technology that should be
                                 outlawed or the cheap, easy answer to climate
                                 change. Neither of these beliefs is reality.
@@ -77,12 +77,12 @@ export class Nuclear extends Component {
                                 </Chart>
                             </div>
                             <p>
-                                Since the opening of America&aposs first reactor
-                                in 1958, nuclear has remained a minor player in
-                                the US energy market. Its share of energy
-                                consumption has remained mostly stable. When the
-                                US began to shut down coal power plants in the
-                                early 2000s, Nuclear’s share of energy
+                                Since the opening of America&apos;s first
+                                reactor in 1958, nuclear has remained a minor
+                                player in the US energy market. Its share of
+                                energy consumption has remained mostly stable.
+                                When the US began to shut down coal power plants
+                                in the early 2000s, Nuclear’s share of energy
                                 consumption remained constant unlike renewables,
                                 which saw a slight increase, and other fossil
                                 fuels which saw a significant increase.
@@ -129,7 +129,7 @@ export class Nuclear extends Component {
                                 world energy market. In many countries, like the
                                 US, it is beaten by fossil fuels. Some
                                 countries, like China, are increasing their
-                                reliance on the source. While other&aposs, like
+                                reliance on the source. While others, like
                                 Germany, are trying to phase it out.
                             </p>
                         </div>
@@ -139,14 +139,14 @@ export class Nuclear extends Component {
                             <h2>Nuclear Safety</h2>
                             <p>
                                 It’s common to hear Nuclear Energy presented as
-                                a binary good or evil. It&aposs either a
+                                a binary good or evil. It&apos;s either a
                                 dangerous, polluting technology that should be
                                 outlawed or the cheap, easy answer to climate
                                 change. Neither of these beliefs is reality.
                             </p>
                             <p>
                                 It’s common to hear Nuclear Energy presented as
-                                a binary good or evil. It&aposs either a
+                                a binary good or evil. It&apos;s either a
                                 dangerous, polluting technology that should be
                                 outlawed or the cheap, easy answer to climate
                                 change. Neither of these beliefs is reality.

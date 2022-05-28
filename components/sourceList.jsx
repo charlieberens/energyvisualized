@@ -6,12 +6,11 @@ export class SourceList extends Component {
         return (
             <div className={styles.sourceList}>
                 {this.props.arr.map((link, i) => (
-                    <div className={styles.sourceListItem}>
+                    <div className={styles.sourceListItem} key={i}>
                         <a
                             href={link}
                             target="_blank"
                             rel="noreferrer"
-                            key={i}
                             className={styles.sourceListLink}
                         >
                             [{i + 1}] {link}

@@ -10,6 +10,8 @@ export class SourceList extends Component {
                         <a
                             href={link}
                             target="_blank"
+                            rel="noreferrer"
+                            key={i + link}
                             className={styles.sourceListLink}
                         >
                             [{i + 1}] {link}

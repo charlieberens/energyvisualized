@@ -7,6 +7,7 @@ export class Source extends Component {
             <a
                 href={this.props.arr[this.props.index]}
                 target="_blank"
+                rel="noreferrer"
                 className={styles.inlineSource}
             >
                 [{this.props.index + 1}]

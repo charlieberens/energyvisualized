@@ -1,0 +1,35 @@
+.inlineSource {
+    font-size: 70%;
+
+    opacity: 0.5;
+    vertical-align: 0.15em;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.sourceList {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    .sourceListItem {
+        margin-bottom: 0.5rem;
+        font-size: 80%;
+
+        .sourceListLink {
+            font-style: italic;
+
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

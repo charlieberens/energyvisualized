@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import LineChart from "../components/lineChart.jsx";
 import BarChart from "../components/barChart.jsx";
 import Chart from "../components/chart.jsx";
+import Source from "../components/source.jsx";
+import SourceList from "../components/sourceList.jsx";
 import styles from "../styles/components/Topic.module.scss";
 import MultiLineChart from "./multiLineChart.jsx";
 
@@ -14,6 +16,15 @@ export class Nuclear extends Component {
         };
 
         this.subgroups = ["Introduction", "Safety", "Waste", "Cost"];
+        this.sources = [
+            [],
+            [
+                "https://www.youtube.com/watch?v=hIGtTImeYU4&t=103s",
+                "https://www.youtube.com/watch?v=bCbms6umE_o&t=9s",
+                "https://www.youtube.com/watch?v=lOqFr87Xh-g",
+                "https://world-nuclear.org/information-library/country-profiles/countries-g-n/germany.aspx",
+            ],
+        ];
     }
 
     render() {
@@ -138,25 +149,118 @@ export class Nuclear extends Component {
                         <div className={styles.subgroup}>
                             <h2>Nuclear Safety</h2>
                             <p>
-                                It’s common to hear Nuclear Energy presented as
-                                a binary good or evil. It&apos;s either a
-                                dangerous, polluting technology that should be
-                                outlawed or the cheap, easy answer to climate
-                                change. Neither of these beliefs is reality.
+                                When people think of nuclear energy, they often
+                                imagine disasters like Chornobyl and Fukushima.
+                                The word "danger" seems inexorably tied to
+                                Nuclear. But should it be?
                             </p>
                             <p>
-                                It’s common to hear Nuclear Energy presented as
-                                a binary good or evil. It&apos;s either a
-                                dangerous, polluting technology that should be
-                                outlawed or the cheap, easy answer to climate
-                                change. Neither of these beliefs is reality.
-                                Throughout this module, I hope to communicate a
-                                broader, more nuanced view of the virtues and
-                                vices of nuclear energy. But these only have
-                                value when viewed in context, so first, this
-                                module will establish nuclear’s place in society
-                                today.
+                                The graph below compares the deaths per KWh from
+                                a variety of energy sources.
                             </p>
+                            <div className={styles.chartContainer}>
+                                <Chart dataset="nuclear&safety_all">
+                                    <BarChart
+                                        dataset="nuclear&safety_all"
+                                        min="0"
+                                        chartWidth="500"
+                                        color="#49d147"
+                                    />
+                                </Chart>
+                            </div>
+                            <p>
+                                Nuclear-related deaths per TWh are miniscule
+                                compared to those of fossil fuels. To give some
+                                sense of scale, below is a graph with the
+                                greatest killers elliminated. And below that, a
+                                graph with all fossil fuels elliminated.
+                            </p>
+                            <div className={styles.chartContainer}>
+                                <Chart dataset="nuclear&safety_partial">
+                                    <BarChart
+                                        dataset="nuclear&safety_partial"
+                                        min="0"
+                                        chartWidth="500"
+                                        color="#49d147"
+                                    />
+                                </Chart>
+                            </div>
+                            <div className={styles.chartContainer}>
+                                <Chart dataset="nuclear&safety_green">
+                                    <BarChart
+                                        dataset="nuclear&safety_green"
+                                        min="0"
+                                        chartWidth="500"
+                                        color="#49d147"
+                                    />
+                                </Chart>
+                            </div>
+                            <p>
+                                It’s clear that the danger of nuclear is more
+                                myth than reality. Nuclear is barely more
+                                dangerous than wind, hydroelectric, and solar;
+                                energy sources that no one considers dangerous.
+                                So why is Nuclear’s safety image so negative?
+                            </p>
+                            <p>
+                                I attribute this to a few factors. Deaths caused
+                                by nuclear energy are concentrated. Individual
+                                incidents, like Chornobyl and Fukushima, are
+                                televised and well known. While, the slow,
+                                individual deaths from worsening air quality
+                                remain hidden.
+                            </p>
+                            <p>
+                                Nuclear energy is also intertwined with the
+                                image of nuclear weapons. At Hiroshima and
+                                Nagasaki, we all saw the destructive power of
+                                radioactive elements. During the Cold War, much
+                                of the world was ever aware of the risk of a
+                                Russian or American attack. When people think of
+                                nuclear, they don’t just think of clean energy,
+                                they think of warheads as well.
+                            </p>
+                            <p>
+                                The two nuclear energy incidents that have
+                                caused deaths, Chornobyl and Fukushima, are
+                                unlikely to repeat. They were caused by poor
+                                design and poor decision-making. Sources{" "}
+                                <Source arr={this.sources[1]} index={0} /> and{" "}
+                                <Source arr={this.sources[1]} index={1} />{" "}
+                                explain the Chernobyl accident in depth. Source{" "}
+                                <Source arr={this.sources[1]} index={2} />{" "}
+                                explains Fukushima in depth.
+                            </p>
+                            <p>
+                                A caveat must be noted. It is impossible to
+                                directly measure the deaths caused by nuclear
+                                incidents, as most happen in after the fact in
+                                the form of increased cancer risk. Because of
+                                this, estimates of death tolls vary
+                                significantly.
+                            </p>
+                            <p>
+                                But, in the end, it doesn’t matter. Even if
+                                death estimates are off by an order of
+                                magnitude, Nuclear would still be much safer
+                                than current fossil fuel sources. Replacing
+                                fossil fuels with nuclear saves lives.
+                            </p>
+                            <p>
+                                Though anti-nuclear activists come from a good
+                                place, they can be damaging. Largely due to the
+                                public’s safety concerns, Germany has massively
+                                decreased their dependence on Nuclear energy. To
+                                fill the void, they have started using more
+                                fossil fuels{" "}
+                                <Source arr={this.sources[1]} index={3} />,
+                                likely causing more deaths instead of preventing
+                                them.
+                            </p>
+                            <p>
+                                Safety is clearly not nuclear’s biggest problem.
+                            </p>
+                            <SourceList arr={this.sources[1]} />
                         </div>
                     )}
                     {this.state.subgroup === 2 && (

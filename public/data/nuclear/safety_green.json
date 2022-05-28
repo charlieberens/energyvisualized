@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "source": {
+            "text": "OurWorldInData.org using Markandya & Wilkinson (2007) and Sovacool et al. (2016)",
+            "url": "https://ourworldindata.org/nuclear-energy"
+        },
+        "x": "Source",
+        "y": "Deaths per terawatt-hour (TWh)",
+        "title": "Death rates from energy production per TWh"
+    },
+    "data": [
+        { "x": "Nuclear", "y": 0.07 },
+        { "x": "Wind", "y": 0.04 },
+        { "x": "Hydroelectric", "y": 0.02 },
+        { "x": "Solar", "y": 0.02 }
+    ]
+}

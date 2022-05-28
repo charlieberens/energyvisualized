@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "source": {
+            "text": "OurWorldInData.org using Markandya & Wilkinson (2007) and Sovacool et al. (2016)",
+            "url": "https://ourworldindata.org/nuclear-energy"
+        },
+        "x": "Source",
+        "y": "Deaths per terawatt-hour (TWh)",
+        "title": "Death rates from energy production per TWh"
+    },
+    "data": [
+        { "x": "Brown coal", "y": 32.72 },
+        { "x": "Coal", "y": 24.62 },
+        { "x": "Oil", "y": 18.43 },
+        { "x": "Biomass", "y": 4.63 },
+        { "x": "Gas", "y": 2.82 },
+        { "x": "Nuclear", "y": 0.07 },
+        { "x": "Wind", "y": 0.04 },
+        { "x": "Hydroelectric", "y": 0.02 },
+        { "x": "Solar", "y": 0.02 }
+    ]
+}

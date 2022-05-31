@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     try {
         const { dataset } = req.query;
         const file_data = await fs.readFile(
-            `public/data/${dataset.replace("&", "/")}.json`
+            `data/${dataset.replace("&", "/")}.json`
         );
         const json_data = JSON.parse(file_data);
         // Do stuff

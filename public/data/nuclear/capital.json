@@ -1,0 +1,19 @@
+{
+    "meta": {
+        "source": {
+            "text": "Penn State University",
+            "url": "https://www.e-education.psu.edu/eme801/node/530"
+        },
+        "x": "Source",
+        "y": "US$ per kW",
+        "title": "Rough Capital Cost of Power Plants"
+    },
+    "data": [
+        { "x": "Coal", "y": 750 },
+        { "x": "Natural Gas", "y": 600 },
+        { "x": "Wind", "y": 2000 },
+        { "x": "Nuclear", "y": 3100 },
+        { "x": "Solar", "y": 4500 },
+        { "x": "Hydroelectric", "y": 3100 }
+    ]
+}

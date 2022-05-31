@@ -24,6 +24,7 @@ export class Nuclear extends Component {
                 "https://www.youtube.com/watch?v=lOqFr87Xh-g",
                 "https://world-nuclear.org/information-library/country-profiles/countries-g-n/germany.aspx",
             ],
+            ["https://www.youtube.com/watch?v=cbeJIwF1pVY"],
         ];
     }
 
@@ -266,12 +267,19 @@ export class Nuclear extends Component {
                     {this.state.subgroup === 2 && (
                         <div className={styles.subgroup}>
                             <h2>Nuclear Waste</h2>
-                            <p></p>
                             <p>
-                                Sunt fugiat cillum nulla ut Lorem duis proident
-                                in consequat ipsum qui aliquip. Irure velit
-                                irure do amet deserunt sint est cillum labore
-                                amet.
+                                Societal pressure and government intervention
+                                are important factors affecting energy use. But,
+                                far more important are economics. To transition
+                                from fossil fuels, we must adopt clean sources
+                                that are cost-effective.
+                            </p>
+                            <p>
+                                Below are the Levelized Costs (LCOEs) of
+                                different energy sources. LCOE is a metric that
+                                communicates the total cost of electricity per
+                                unit of energy, considering upfront costs, fuel
+                                costs, waste costs, etc.
                             </p>
                             <div className={styles.chartContainer}>
                                 <Chart dataset="nuclear&lcoe">
@@ -283,15 +291,69 @@ export class Nuclear extends Component {
                                     />
                                 </Chart>
                             </div>
-
                             <p>
-                                Mollit sunt dolore sit mollit ullamco nisi
-                                fugiat nisi laboris officia veniam deserunt.
-                                Nulla aliqua dolore cillum aliquip mollit quis
-                                pariatur labore est qui Lorem. Reprehenderit
-                                laborum sint nisi amet eiusmod cupidatat
-                                cupidatat culpa tempor tempor esse.
+                                On the surface, Nuclear energy seems like a
+                                great option economically. New nuclear plants
+                                are cheaper than new gas plants (generally the
+                                cheapest fossil fuel), and refurbishing existing
+                                nuclear plants is cheaper than all other sources
+                                of energy.
                             </p>
+                            <p>
+                                If this is true, then why are nuclear plants
+                                (like the Diablo Canyon plant in California)
+                                being shutdown? Why is natural gas still being
+                                built?
+                            </p>
+                            <p>
+                                The reality is more complicated. Sources have
+                                different costs in different locations depending
+                                on fuel avaliability and weather conditions.
+                            </p>
+                            <p>
+                                Furthermore, the upfront cost of Nuclear is far
+                                higher than its competitors.
+                            </p>
+                            <div className={styles.chartContainer}>
+                                <Chart dataset="nuclear&capital">
+                                    <BarChart
+                                        dataset="nuclear&capital"
+                                        min="0"
+                                        chartWidth="500"
+                                        color="#49d147"
+                                    />
+                                </Chart>
+                            </div>
+                            <p>
+                                Nuclear plants also take much longer to build,
+                                and thus take much longer to become profitable.
+                            </p>
+                            <p>
+                                Because of the cost efficiency of nuclear fuel,
+                                Nuclear can become cheaper than its competitors
+                                in the long run. But, its route to profitability
+                                is far longer, and thus Nuclear investments are
+                                riskier.
+                            </p>
+                            <p>
+                                In countries where the opinion on nuclear is
+                                negative and anti-nuclear laws could be passed,
+                                the risk is clear. If you were an energy
+                                executive, you might consider avoiding nuclear
+                                as well.
+                            </p>
+                            <p>
+                                The Illinois Energy Professor has a{" "}
+                                <a
+                                    href="https://www.youtube.com/watch?v=cbeJIwF1pVY"
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    className={styles.inlineLink}
+                                >
+                                    great video on this topic
+                                </a>
+                            </p>
+                            <SourceList arr={this.sources[2]} />
                         </div>
                     )}
                 </div>

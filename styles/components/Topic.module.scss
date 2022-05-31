@@ -54,3 +54,11 @@
         }
     }
 }
+
+.inlineLink {
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}

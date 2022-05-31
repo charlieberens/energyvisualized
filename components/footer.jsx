@@ -7,7 +7,7 @@ export default class Footer extends Component {
             <footer className={styles.footer}>
                 <span className={styles.plug}>
                     <span>Made by </span>
-                    <a href="https://berenswebdev.org">Charlie Berens</a>
+                    <a href="https://www.berenswebdev.com/">Charlie Berens</a>
                 </span>
                 <span className={styles.copy}>
                     {/* &copy; Charlie Berens {new Date().getFullYear()} */}

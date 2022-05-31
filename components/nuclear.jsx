@@ -15,7 +15,7 @@ export class Nuclear extends Component {
             subgroup: 0,
         };
 
-        this.subgroups = ["Introduction", "Safety", "Waste", "Cost"];
+        this.subgroups = ["Introduction", "Safety", "Cost"];
         this.sources = [
             [],
             [
@@ -266,16 +266,24 @@ export class Nuclear extends Component {
                     {this.state.subgroup === 2 && (
                         <div className={styles.subgroup}>
                             <h2>Nuclear Waste</h2>
-                            <p>
-                                Ullamco sit commodo ut laborum cillum veniam
-                                adipisicing labore eiusmod.
-                            </p>
+                            <p></p>
                             <p>
                                 Sunt fugiat cillum nulla ut Lorem duis proident
                                 in consequat ipsum qui aliquip. Irure velit
                                 irure do amet deserunt sint est cillum labore
                                 amet.
                             </p>
+                            <div className={styles.chartContainer}>
+                                <Chart dataset="nuclear&lcoe">
+                                    <BarChart
+                                        dataset="nuclear&lcoe"
+                                        min="0"
+                                        chartWidth="500"
+                                        color="#49d147"
+                                    />
+                                </Chart>
+                            </div>
+
                             <p>
                                 Mollit sunt dolore sit mollit ullamco nisi
                                 fugiat nisi laboris officia veniam deserunt.
@@ -284,40 +292,6 @@ export class Nuclear extends Component {
                                 laborum sint nisi amet eiusmod cupidatat
                                 cupidatat culpa tempor tempor esse.
                             </p>
-                        </div>
-                    )}
-                    {this.state.subgroup === 3 && (
-                        <div>
-                            <div className={styles.subgroup}>
-                                <h2>Nuclear Economics</h2>
-                                <p>
-                                    Proident enim qui elit minim laborum
-                                    reprehenderit est dolore veniam veniam et
-                                    enim in ut. Duis dolor est ea ad non
-                                    deserunt ut enim et. Laborum id consequat
-                                    duis sit cupidatat ex cillum occaecat est
-                                    mollit do magna tempor qui.
-                                </p>
-                                <p>
-                                    Sunt fugiat cillum nulla ut Lorem duis
-                                    proident in consequat ipsum qui aliquip.
-                                    Irure velit irure do amet deserunt sint est
-                                    cillum labore amet.
-                                </p>
-                                <p>
-                                    Ullamco sit commodo ut laborum cillum veniam
-                                    adipisicing labore eiusmod.
-                                </p>
-                                <p>
-                                    Mollit sunt dolore sit mollit ullamco nisi
-                                    fugiat nisi laboris officia veniam deserunt.
-                                    Nulla aliqua dolore cillum aliquip mollit
-                                    quis pariatur labore est qui Lorem.
-                                    Reprehenderit laborum sint nisi amet eiusmod
-                                    cupidatat cupidatat culpa tempor tempor
-                                    esse.
-                                </p>
-                            </div>
                         </div>
                     )}
                 </div>

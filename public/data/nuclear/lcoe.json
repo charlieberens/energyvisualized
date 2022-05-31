@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "source": {
+            "text": "LCOE of Different Energy Sources w/ 7% Discount Rate",
+            "url": "https://www.oecd-nea.org/jcms/pl_51126/low-carbon-generation-is-becoming-cost-competitive-nea-and-iea-say-in-new-report"
+        },
+        "x": "Source",
+        "y": "US$ per MWh",
+        "title": "Death rates from energy production per TWh"
+    },
+    "data": [
+        { "x": "Solar (Utility)", "y": 56 },
+        { "x": "Onshore Wind", "y": 50 },
+        { "x": "Geothermal", "y": 100 },
+        { "x": "Nuclear (Extension)", "y": 32 },
+        { "x": "Nuclear (New)", "y": 68 },
+        { "x": "Hydroelectric", "y": 72 },
+        { "x": "Gas", "y": 71 }
+    ]
+}

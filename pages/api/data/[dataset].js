@@ -1,20 +1,23 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-const fs = require("fs").promises;
-const path = require("path");
+import axios from "axios";
 
 export default async function handler(req, res) {
     try {
         const { dataset } = req.query;
-        const dir = path.resolve(
-            "./public",
-            `data/${dataset.replace("&", "/")}.json`
-        );
-        const file_data = await fs.readFile(dir);
-        const json_data = JSON.parse(file_data);
-        // Do stuff
-        res.status(200).json(json_data);
+
+        const root =
+            process && process.env.NODE_ENV === "development"
+                ? "localhost:3000"
+                : "energyvisualized.com";
+
+        const our_res = await fetch(
+            `http://${root}/data/${dataset.replace("&", "/")}.json`
+        ); //
+        const data = await our_res.json();
+
+        res.status(200).json(data);
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error: "Error reading data" });
+        res.status(500).json({ error });
     }
 }
